@@ -44,7 +44,7 @@ packages:
     source: hosted
     version: "2.1.0"
   build:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: build
       url: "https://pub.dartlang.org"
@@ -72,7 +72,7 @@ packages:
     source: hosted
     version: "2.0.9"
   build_runner:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: build_runner
       url: "https://pub.dartlang.org"

@@ -28,4 +28,15 @@ class _$ThetaService extends ThetaService {
         Request('POST', $url, client.baseUrl, body: $body, headers: $headers);
     return client.send<dynamic, dynamic>($request);
   }
+
+  @override
+  Future<Response<dynamic>> info() {
+    final $url = 'http://192.168.1.1/osc/info';
+    final $headers = {
+      'Content-Type': 'application/json;charset=utf-8',
+    };
+
+    final $request = Request('GET', $url, client.baseUrl, headers: $headers);
+    return client.send<dynamic, dynamic>($request);
+  }
 }

@@ -1,10 +1,27 @@
 part of 'video_settings_bloc.dart';
 
-abstract class VideoSettingsState extends Equatable {
-  const VideoSettingsState();
-  
-  @override
-  List<Object> get props => [];
-}
+class VideoSettingsState extends Equatable {
+  final String responseMessage;
 
-class VideoSettingsInitial extends VideoSettingsState {}
+  const VideoSettingsState({
+    required this.responseMessage,
+  });
+
+  factory VideoSettingsState.initial() => VideoSettingsState(
+        responseMessage: 'video settings',
+      );
+
+  @override
+  List<Object> get props => [responseMessage];
+
+  VideoSettingsState copyWith({
+    String? responseMessage,
+  }) {
+    return VideoSettingsState(
+      responseMessage: responseMessage ?? this.responseMessage,
+    );
+  }
+
+  @override
+  bool get stringify => true;
+}

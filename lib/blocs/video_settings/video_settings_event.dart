@@ -6,3 +6,5 @@ abstract class VideoSettingsEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class Video8K2FPSEvent extends VideoSettingsEvent {}

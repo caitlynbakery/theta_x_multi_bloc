@@ -6,3 +6,11 @@ abstract class CameraUseEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class TakePictureEvent extends CameraUseEvent {}
+
+class StartCaptureEvent extends CameraUseEvent {}
+
+class StopCaptureEvent extends CameraUseEvent {}
+
+class VideoModeEvent extends CameraUseEvent {}

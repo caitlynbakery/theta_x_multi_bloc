@@ -8,3 +8,17 @@ abstract class VideoSettingsEvent extends Equatable {
 }
 
 class Video8K2FPSEvent extends VideoSettingsEvent {}
+
+class Video8K10FPSEvent extends VideoSettingsEvent {}
+
+class Video4K30FPSEvent extends VideoSettingsEvent {}
+
+class FineBitRateEvent extends VideoSettingsEvent {}
+
+class NormalBitRateEvent extends VideoSettingsEvent {}
+
+class EconomyBitRateEvent extends VideoSettingsEvent {}
+
+class VideoStitchingOnEvent extends VideoSettingsEvent {}
+
+class VideoStitchingOffEvent extends VideoSettingsEvent {}

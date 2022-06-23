@@ -21,7 +21,7 @@ class RecordingButton extends StatelessWidget {
                       context.read<CameraUseBloc>().add(StartCaptureEvent());
                     },
                     iconSize: 200,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.circle_outlined,
                       color: Color.fromARGB(255, 240, 114, 105),
                     ))
@@ -30,7 +30,7 @@ class RecordingButton extends StatelessWidget {
                       context.read<CameraUseBloc>().add(StopCaptureEvent());
                     },
                     iconSize: 200,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.square_rounded,
                       color: Color.fromARGB(255, 240, 114, 105),
                     ))

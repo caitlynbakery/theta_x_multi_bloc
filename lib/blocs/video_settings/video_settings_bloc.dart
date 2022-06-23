@@ -28,8 +28,6 @@ class VideoSettingsBloc extends Bloc<VideoSettingsEvent, VideoSettingsState> {
         }
       });
       emit(VideoSettingsState(responseMessage: response.bodyString));
-
-      // TODO: implement event handler
     });
     on<Video8K10FPSEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -47,8 +45,6 @@ class VideoSettingsBloc extends Bloc<VideoSettingsEvent, VideoSettingsState> {
         }
       });
       emit(VideoSettingsState(responseMessage: response.bodyString));
-
-      // TODO: implement event handler
     });
     on<Video4K30FPSEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -66,8 +62,6 @@ class VideoSettingsBloc extends Bloc<VideoSettingsEvent, VideoSettingsState> {
         }
       });
       emit(VideoSettingsState(responseMessage: response.bodyString));
-
-      // TODO: implement event handler
     });
     on<FineBitRateEvent>((event, emit) async {
       var response = await thetaService.command({

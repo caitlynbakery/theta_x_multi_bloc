@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:theta_x_multi_bloc/blocs/video_settings/video_settings_bloc.dart';
 
@@ -14,12 +12,12 @@ class VideoSettingsScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black54,
-            title: Text('Video Settings'),
+            title: const Text('Video Settings'),
           ),
           body: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
+                const Text(
                   'Frame Format',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -32,7 +30,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(Video8K2FPSEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         '8K 2FPS',
                       ),
                     ),
@@ -42,7 +40,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(Video8K10FPSEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         '8K 10FPS',
                       ),
                     ),
@@ -52,13 +50,13 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(Video4K30FPSEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         '4K 30FPS',
                       ),
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Bit Rate',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -71,7 +69,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(FineBitRateEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         'Fine',
                       ),
                     ),
@@ -81,7 +79,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(NormalBitRateEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         'Normal',
                       ),
                     ),
@@ -91,13 +89,13 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(EconomyBitRateEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         'Economy',
                       ),
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Video Stitching',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -110,7 +108,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(VideoStitchingOnEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         'On',
                       ),
                     ),
@@ -120,7 +118,7 @@ class VideoSettingsScreen extends StatelessWidget {
                             .read<VideoSettingsBloc>()
                             .add(VideoStitchingOffEvent());
                       },
-                      child: Text(
+                      child: const Text(
                         'Off',
                       ),
                     ),

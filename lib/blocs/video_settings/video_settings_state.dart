@@ -7,7 +7,7 @@ class VideoSettingsState extends Equatable {
     required this.responseMessage,
   });
 
-  factory VideoSettingsState.initial() => VideoSettingsState(
+  factory VideoSettingsState.initial() => const VideoSettingsState(
         responseMessage: 'video settings',
       );
 

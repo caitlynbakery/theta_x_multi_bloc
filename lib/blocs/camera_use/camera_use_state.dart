@@ -8,7 +8,7 @@ class CameraUseState extends Equatable {
       {required this.responseMessage, this.isRecording = false});
 
   factory CameraUseState.initial() =>
-      CameraUseState(responseMessage: 'waiting for response');
+      const CameraUseState(responseMessage: 'waiting for response');
 
   @override
   List<Object> get props => [responseMessage];

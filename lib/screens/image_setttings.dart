@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../blocs/image_settings/image_settings_bloc.dart';
@@ -16,14 +13,14 @@ class ImageSettingsScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black54,
-            title: Text(
+            title: const Text(
               "Image Settings",
             ),
           ),
           body: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
+                const Text(
                   'Image Stitching',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -36,7 +33,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ImageStitchingAutoEvent());
                       },
-                      child: Text('Auto'),
+                      child: const Text('Auto'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -44,7 +41,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ImageStitchingNoneEvent());
                       },
-                      child: Text('None'),
+                      child: const Text('None'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -52,7 +49,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ImageStitchingStaticEvent());
                       },
-                      child: Text('Static'),
+                      child: const Text('Static'),
                     ),
                   ],
                 ),
@@ -65,7 +62,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ImageStitchingDynamicEvent());
                       },
-                      child: Text('Dynamic'),
+                      child: const Text('Dynamic'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -73,11 +70,11 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ImageStitchingDynamicSemiAutoEvent());
                       },
-                      child: Text('DynamicSemiAuto'),
+                      child: const Text('DynamicSemiAuto'),
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Top Bottom Correction',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                   textAlign: TextAlign.center,
@@ -91,7 +88,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(TopBottomCorrectionEvent());
                       },
-                      child: Text('Apply'),
+                      child: const Text('Apply'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -99,11 +96,11 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(TopBottomDisapplyEvent());
                       },
-                      child: Text('Disapply'),
+                      child: const Text('Disapply'),
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Exposure',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -116,7 +113,7 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ExposureMinus2Event());
                       },
-                      child: Text('-2.0'),
+                      child: const Text('-2.0'),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -124,29 +121,29 @@ class ImageSettingsScreen extends StatelessWidget {
                             .read<ImageSettingsBloc>()
                             .add(ExposureMinus1Event());
                       },
-                      child: Text('-1.0'),
+                      child: const Text('-1.0'),
                     ),
                     ElevatedButton(
                       onPressed: () {
                         context.read<ImageSettingsBloc>().add(Exposure0Event());
                       },
-                      child: Text('0.0'),
+                      child: const Text('0.0'),
                     ),
                     ElevatedButton(
                       onPressed: () {
                         context.read<ImageSettingsBloc>().add(Exposure1Event());
                       },
-                      child: Text('1.0'),
+                      child: const Text('1.0'),
                     ),
                     ElevatedButton(
                       onPressed: () {
                         context.read<ImageSettingsBloc>().add(Exposure2Event());
                       },
-                      child: Text('2.0'),
+                      child: const Text('2.0'),
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Filter',
                   style: TextStyle(fontSize: 30, fontFamily: 'LemonMilk'),
                 ),
@@ -159,11 +156,12 @@ class ImageSettingsScreen extends StatelessWidget {
                               .read<ImageSettingsBloc>()
                               .add(FilterHDREvent());
                         },
-                        child: Text('HDR'),
+                        child: const Text('HDR'),
                       ),
                       OutlinedButton(
                           style: OutlinedButton.styleFrom(
-                              side: BorderSide(width: 2, color: Colors.blue),
+                              side: const BorderSide(
+                                  width: 2, color: Colors.blue),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20))),
                           onPressed: () {
@@ -171,7 +169,7 @@ class ImageSettingsScreen extends StatelessWidget {
                                 .read<ImageSettingsBloc>()
                                 .add(FilterOffEvent());
                           },
-                          child: Text(
+                          child: const Text(
                             'Off',
                           ))
                     ]),

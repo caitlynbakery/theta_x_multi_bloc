@@ -1,8 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:chopper/chopper.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-
 import '../../services/theta_service.dart';
 
 part 'camera_use_event.dart';
@@ -19,7 +17,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
       print(response.bodyString);
     });
     on<StartCaptureEvent>((event, emit) async {
-      emit(CameraUseState(responseMessage: '', isRecording: true));
+      emit(const CameraUseState(responseMessage: '', isRecording: true));
       var response =
           await thetaService.command({'name': 'camera.startCapture'});
       emit(CameraUseState(
@@ -28,7 +26,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
     });
     on<StopCaptureEvent>(
       (event, emit) async {
-        emit(CameraUseState(responseMessage: '', isRecording: false));
+        emit(const CameraUseState(responseMessage: '', isRecording: false));
         var response =
             await thetaService.command({'name': 'camera.stopCapture'});
         emit(CameraUseState(

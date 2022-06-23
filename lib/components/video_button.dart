@@ -18,6 +18,7 @@ class VideoButton extends StatelessWidget {
               context.read<CameraUseBloc>().add(VideoModeEvent());
             },
             iconSize: 40,
+            // ignore: prefer_const_constructors
             icon: Icon(color: Colors.black54, Icons.video_camera_front))
       ],
     );

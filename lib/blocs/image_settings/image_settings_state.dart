@@ -6,7 +6,7 @@ class ImageSettingsState extends Equatable {
     required this.response,
   });
   factory ImageSettingsState.initial() =>
-      ImageSettingsState(response: 'initial');
+      const ImageSettingsState(response: 'initial');
 
   @override
   List<Object> get props => [response];

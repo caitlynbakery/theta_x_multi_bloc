@@ -41,6 +41,7 @@ dependencies:
   build: ^2.3.0
   build_runner: ^2.1.11
   dropdown_button2: ^1.6.2
+  bloc: ^8.0.3
 
 dev_dependencies:
   flutter_test:

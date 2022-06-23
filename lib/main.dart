@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.black54,
             ),
-            drawer: MyDrawer(),
+            drawer: const MyDrawer(),
             body: BlocBuilder<CameraUseBloc, CameraUseState>(
               builder: (context, state) {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     VideoButton(),
                     SizedBox(
                       height: 40,
@@ -63,17 +63,21 @@ class MyDrawer extends StatelessWidget {
         child: ListView(
       children: [
         ListTile(
-          title: Text('Video Settings'),
+          title: const Text('Video Settings'),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => VideoSettingsScreen()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const VideoSettingsScreen()));
           },
         ),
         ListTile(
-          title: Text('Image Settings'),
+          title: const Text('Image Settings'),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ImageSettingsScreen()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ImageSettingsScreen()));
           },
         )
       ],

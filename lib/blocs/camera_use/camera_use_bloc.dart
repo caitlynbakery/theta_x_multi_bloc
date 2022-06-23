@@ -16,7 +16,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
     on<TakePictureEvent>((event, emit) async {
       var response = await thetaService.command({'name': 'camera.takePicture'});
       emit(CameraUseState(responseMessage: response.bodyString));
-      print(response.body);
+      print(response.bodyString);
     });
     on<StartCaptureEvent>((event, emit) async {
       emit(CameraUseState(responseMessage: '', isRecording: true));
@@ -24,7 +24,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
           await thetaService.command({'name': 'camera.startCapture'});
       emit(CameraUseState(
           responseMessage: response.bodyString, isRecording: true));
-      print(response.body);
+      print(response.bodyString);
     });
     on<StopCaptureEvent>(
       (event, emit) async {
@@ -33,7 +33,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
             await thetaService.command({'name': 'camera.stopCapture'});
         emit(CameraUseState(
             responseMessage: response.bodyString, isRecording: false));
-        print(response.body);
+        print(response.bodyString);
       },
     );
     on<VideoModeEvent>((event, emit) async {
@@ -43,7 +43,7 @@ class CameraUseBloc extends Bloc<CameraUseEvent, CameraUseState> {
           'options': {'captureMode': 'video'}
         }
       });
-      emit(CameraUseState(responseMessage: response.body));
+      emit(CameraUseState(responseMessage: response.bodyString));
     });
   }
 }

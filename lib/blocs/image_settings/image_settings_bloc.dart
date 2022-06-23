@@ -19,7 +19,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_imageStitching': 'auto'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ImageStitchingNoneEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -28,7 +28,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_imageStitching': 'none'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ImageStitchingStaticEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -37,7 +37,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_imageStitching': 'static'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ImageStitchingDynamicEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -46,7 +46,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_imageStitching': 'dynamic'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ImageStitchingDynamicSemiAutoEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -55,7 +55,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_imageStitching': 'dynamicSemiAuto'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<TopBottomCorrectionEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -64,7 +64,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_topBottomCorrection': 'Apply'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<TopBottomDisapplyEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -73,7 +73,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_topBottomCorrection': 'Disapply'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ExposureMinus2Event>((event, emit) async {
       var response = await thetaService.command({
@@ -82,7 +82,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'exposureCompensation': -2.0}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<ExposureMinus1Event>((event, emit) async {
       var response = await thetaService.command({
@@ -91,7 +91,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'exposureCompensation': -1.0}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<Exposure0Event>((event, emit) async {
       var response = await thetaService.command({
@@ -100,7 +100,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'exposureCompensation': 0.0}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<Exposure1Event>((event, emit) async {
       var response = await thetaService.command({
@@ -109,7 +109,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'exposureCompensation': 1.0}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<Exposure2Event>((event, emit) async {
       var response = await thetaService.command({
@@ -118,7 +118,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'exposureCompensation': 2.0}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<FilterHDREvent>((event, emit) async {
       var response = await thetaService.command({
@@ -127,7 +127,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_filter': 'hdr'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
     on<FilterOffEvent>((event, emit) async {
       var response = await thetaService.command({
@@ -136,7 +136,7 @@ class ImageSettingsBloc extends Bloc<ImageSettingsEvent, ImageSettingsState> {
           'options': {'_filter': 'off'}
         }
       });
-      emit(ImageSettingsState(response: response.body));
+      emit(ImageSettingsState(response: response.bodyString));
     });
   }
 }
